@@ -22,3 +22,14 @@
         opacity: 0.9;
     }
 }
+
+@mixin icon_hover{
+    transition: 0.3s;
+    &:hover{
+        background: #DFAD2A;
+        border: 1px solid #DFAD2A;
+    svg g path{
+        fill: #fff;
+    }
+}
+}

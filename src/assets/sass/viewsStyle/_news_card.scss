@@ -1,0 +1,244 @@
+.jcc {
+  justify-content: center;
+}
+
+.news-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 310px;
+  gap: 10px;
+  &__img {
+    width: 100%;
+    height: 160px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+  &__type {
+    color: $sub-title;
+    @include font(400, 14, 1.1);
+    text-align: left;
+  }
+  &__title {
+    width: 100%;
+    padding: 10px 43px 20px 0;
+    color: $text;
+    @include font(400, 14, 1.4);
+  }
+  &__create-time {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .time-text,
+    .preview-text {
+      color: $time-text;
+      @include font(400, 12, 1);
+    }
+    .time,
+    .preview {
+      display: flex;
+      align-items: center;
+    }
+    .time-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
+      svg {
+        object-fit: contain;
+      }
+    }
+    .preview-icon {
+      width: 21px;
+      height: 21px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      svg {
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+.world-news {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 30px;
+
+  &__img {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: calc((100% / 2) - 30px);
+    max-width: 650px;
+    width: 650px;
+
+    img {
+      width: 100%;
+      height: 461px;
+      object-fit: cover;
+    }
+  }
+  &__title {
+    padding: 20px 0 10px;
+    color: $title;
+    @include font(700, 24, 1.3);
+  }
+  &__create-time {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .time-text,
+    .preview-text {
+      color: $time-text;
+      @include font(400, 12, 1);
+    }
+    .time,
+    .preview {
+      display: flex;
+      align-items: center;
+    }
+    .time-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
+      svg {
+        object-fit: contain;
+      }
+    }
+    .preview-icon {
+      width: 21px;
+      height: 21px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      svg {
+        object-fit: contain;
+      }
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    width: calc((100% / 2) - 30px);
+    width: 650px;
+    gap: 30px;
+  }
+  &__card {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid #00000010;
+    padding-bottom: 10px;
+    gap: 5px;
+  }
+  &__card-title {
+    color: $title;
+    @include font(700, 18, 1.3);
+    &:hover {
+      color: $text;
+    }
+  }
+}
+
+.site-video-news {
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__img {
+    width: 100%;
+    height: 350px;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 86px;
+    height: 86px;
+    background-color: #ffffff70;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    svg {
+      width: 22px;
+      height: 25px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+  }
+  &__info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__title{
+    color: $title;
+    @include font(700, 24, 1.4);
+  }
+  &__create-time {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    .time-text,
+    .preview-text {
+      color: $time-text;
+      @include font(400, 12, 1);
+    }
+    .time,
+    .preview {
+      display: flex;
+      align-items: center;
+    }
+    .time-icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 17px;
+      height: 17px;
+      flex-shrink: 0;
+      svg {
+        object-fit: contain;
+      }
+    }
+    .preview-icon {
+      width: 21px;
+      height: 21px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      svg {
+        object-fit: contain;
+      }
+    }
+  }
+}

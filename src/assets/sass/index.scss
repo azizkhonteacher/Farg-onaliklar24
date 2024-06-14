@@ -3,4 +3,7 @@
 @import "./extends";
 @import "./mixin";
 @import "./reset";
-@import "./header_vs_footer";
+
+
+@import "./viewsStyle/HomeView.scss";
+@import "./viewsStyle/news_card";
