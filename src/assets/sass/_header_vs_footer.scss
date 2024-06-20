@@ -65,7 +65,8 @@
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: space-between;
+    // justify-content: ;
+    gap: 50px;
     padding: 0 173px;
   }
   &__li a {
@@ -106,7 +107,8 @@
     &__navbar {
       display: flex;
       align-items: center;
-      justify-content: space-around;
+      // justify-content: space-around;
+      gap: 50px;
       a{
         transition: 0.3s;
         @include nav_hover;

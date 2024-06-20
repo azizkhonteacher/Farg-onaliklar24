@@ -5,7 +5,8 @@
 .news-card {
   display: flex;
   flex-direction: column;
-  max-width: 310px;
+  width: 310px;
+  height: auto;
   gap: 10px;
   &__img {
     width: 100%;
@@ -20,6 +21,12 @@
   &__info {
     display: flex;
     flex-direction: column;
+    height: auto;
+  }
+  &__wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
   &__type {
     color: $sub-title;
@@ -27,6 +34,7 @@
     text-align: left;
   }
   &__title {
+    display: flex;
     width: 100%;
     padding: 10px 43px 20px 0;
     color: $text;
@@ -36,6 +44,9 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-top: auto;
+    flex-grow: 1;
+    // margin-top: 20px;
     .time-text,
     .preview-text {
       color: $time-text;

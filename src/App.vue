@@ -39,19 +39,14 @@
 
       <div class="header-navbar">
         <div class="container">
-          <a href="#" class="header-navbar__logo">
+          <RouterLink to="/" class="header-navbar__logo">
             <img src="./assets/images/site-logo.png" alt="img" />
-          </a>
+          </RouterLink>
 
           <ul class="header-navbar__nav">
-            <li class="header-navbar__li"><a href="#">Ўзбекистон</a></li>
-            <li class="header-navbar__li"><a href="#">Технология</a></li>
-            <li class="header-navbar__li"><a href="#">Жахон</a></li>
-            <li class="header-navbar__li"><a href="#">Фарғона</a></li>
-            <li class="header-navbar__li"><a href="#">Жамият</a></li>
-            <li class="header-navbar__li"><a href="#">Сиёсат</a></li>
-            <li class="header-navbar__li"><a href="#">Муҳокама</a></li>
-            <li class="header-navbar__li"><a href="#">Спорт</a></li>
+            <li v-for="link in categorys?.data" :key="link" class="header-navbar__li">
+              <router-link :to="`/category/${link?.slug}`">{{ link?.title }}</router-link>
+            </li>
           </ul>
         </div>
       </div>
@@ -61,34 +56,30 @@
 
     <footer class="footer">
       <div class="container">
-
         <div class="footer-logo">
-          <img
-            src="./assets/images/site-logo.png"
-            alt="img"
-            class="footer-logo__img"
-          />
+          <RouterLink to="/">
+            <img
+              src="./assets/images/site-logo.png"
+              alt="img"
+              class="footer-logo__img"
+            />
+          </RouterLink>
         </div>
-  
+
         <div class="footer-nav">
           <ul class="footer-nav__navbar">
-            <li class="footer-nav__li"><a href="#">Ўзбекистон</a></li>
-            <li class="footer-nav__li"><a href="#">Технология</a></li>
-            <li class="footer-nav__li"><a href="#">Жахон</a></li>
-            <li class="footer-nav__li"><a href="#">Фарғона</a></li>
-            <li class="footer-nav__li"><a href="#">Жамият</a></li>
-            <li class="footer-nav__li"><a href="#">Сиёсат</a></li>
-            <li class="footer-nav__li"><a href="#">Муҳокама</a></li>
-            <li class="footer-nav__li"><a href="#">Спорт</a></li>
+            <li v-for="link in categorys?.data" :key="link" class="footer-nav__li">
+              <router-link :to="`/category/${link?.slug}`">{{ link?.title }}</router-link>
+            </li>
           </ul>
 
           <span></span>
-  
+
           <p class="footer-nav__ptitle">
             2021 © Фарғоналиклар Барча ҳуқуқлар ҳимоя қилинган
           </p>
         </div>
-  
+
         <div class="footer-icons">
           <ul>
             <li>
@@ -213,15 +204,21 @@
             </li>
           </ul>
         </div>
-
       </div>
     </footer>
-
-    <footer></footer>
   </div>
 </template>
 
 <script setup>
+import services from "./services/services.js";
+import { ref } from "vue";
+
+const categorys = ref({});
+const getCategorys = async () => {
+  const res = await services.getCategory();
+  categorys.value = res.data;
+};
+getCategorys();
 </script>
 
 <style lang="scss" scoped></style>
