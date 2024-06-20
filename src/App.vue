@@ -44,8 +44,14 @@
           </RouterLink>
 
           <ul class="header-navbar__nav">
-            <li v-for="link in categorys?.data" :key="link" class="header-navbar__li">
-              <router-link :to="`/category/${link?.slug}`">{{ link?.title }}</router-link>
+            <li
+              v-for="link in categorys?.data"
+              :key="link"
+              class="header-navbar__li"
+            >
+              <router-link :to="`/category/${link?.slug}/${link?.id}`">{{
+                link?.title
+              }}</router-link>
             </li>
           </ul>
         </div>
@@ -68,8 +74,14 @@
 
         <div class="footer-nav">
           <ul class="footer-nav__navbar">
-            <li v-for="link in categorys?.data" :key="link" class="footer-nav__li">
-              <router-link :to="`/category/${link?.slug}`">{{ link?.title }}</router-link>
+            <li
+              v-for="link in categorys?.data"
+              :key="link"
+              class="footer-nav__li"
+            >
+              <router-link :to="`/category/${link?.id}`">{{
+                link?.title
+              }}</router-link>
             </li>
           </ul>
 

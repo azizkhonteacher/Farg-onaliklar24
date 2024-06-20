@@ -8,15 +8,21 @@ export default {
   getLatestNews() {
     return axios.get(`${baseURL}/news/last-news`);
   },
-  getNewsDetail(slug){
+  getDetail(slug) {
     return axios.get(`${baseURL}/news/news-detail/`, {
-        slug,
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      slug: slug,
+    });
+  },
+  getCategory() {
+    return axios.get(`${baseURL}/category/index`);
+  },
+  getDetailCategory(id, slug, page){
+    return axios.post(`${baseURL}/category/category?id=${id}&page=${page}`, {
+      slug: slug,
     })
-  },
-  getCategory(){
-    return axios.get(`${baseURL}/category/index/`)
-  },
-  getCategoryDetail(slug){
-    return axios.get(`${baseURL}/news/list/?tag=${slug}`)
   }
 };

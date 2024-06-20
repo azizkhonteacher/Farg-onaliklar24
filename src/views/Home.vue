@@ -39,42 +39,17 @@
 
           <div class="site-news-types__cards jcc">
             <NewsCard
-              v-for="lastnews in latesNews.data.last_news"
+              v-for="lastnews in latesNews?.data.last_news"
               :key="lastnews"
-              title="Ўзбекистон"
               :news="lastnews"
             />
           </div>
         </div>
       </div>
 
-      <!-- jahon block -->
-      <div class="site-news-types__block">
-        <div class="container">
-          <div class="site-news-types__info">
-            <h3 class="site-news-types__type">Жахон</h3>
-            <a class="site-news-types__to" href="#">Барчаси</a>
-          </div>
+      
 
-          <div class="site-news-types__cards">
-            <WorldCard />
-          </div>
-        </div>
-      </div>
-
-      <!-- Sport block -->
-      <div class="site-news-types__block">
-        <div class="container">
-          <div class="site-news-types__info">
-            <h3 class="site-news-types__type">Спорт</h3>
-            <a class="site-news-types__to" href="#">Барчаси</a>
-          </div>
-
-          <div class="site-news-types__cards jcc">
-            <NewsCard v-for="item in 8" :key="item" title="Спорт" />
-          </div>
-        </div>
-      </div>
+      
     </div>
 
     <div class="site-bottom-img">
@@ -103,7 +78,6 @@ import { RouterLink, RouterView } from "vue-router";
 
 // componentani ulaydim news-card
 import NewsCard from "@/components/news_card.vue";
-import WorldCard from "@/components/world_news.vue";
 import VideoCard from "@/components/news_video.vue";
 import { onMounted, ref } from "vue";
 
