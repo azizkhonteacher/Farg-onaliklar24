@@ -61,6 +61,7 @@ const addPageCtegory = async () => {
   news.value.push(...res.data?.data?.news_list);
 };
 watchEffect(() => {
+  
   getCategoryDetail();
 })
 </script>
