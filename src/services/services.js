@@ -9,7 +9,7 @@ export default {
     return axios.get(`${baseURL}/news/last-news`);
   },
   getDetail(slug) {
-    return axios.get(`${baseURL}/news/news-detail/`, {
+    return axios.post(`${baseURL}/news/news-detail`, {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",

@@ -39,7 +39,7 @@
 
           <div class="site-news-types__cards jcc">
             <NewsCard
-              v-for="lastnews in latesNews?.data.last_news"
+              v-for="lastnews in latesNews?.data?.last_news"
               :key="lastnews"
               :news="lastnews"
             />
